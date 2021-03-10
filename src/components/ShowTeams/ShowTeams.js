@@ -12,7 +12,7 @@ const ShowTeams = (props) => {
     return (
         <div >
             <Container className="card-container">
-                <div>
+                <div >
                     <Card className="mt-3 card">
                         <Card.Img
                             className="px-3 pt-3"

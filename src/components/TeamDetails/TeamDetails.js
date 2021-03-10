@@ -11,7 +11,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 import { useParams } from "react-router-dom";
-import './TeamDetails.css'
+import male from "./male.png";
+import "./TeamDetails.css";
 library.add(faFacebookF);
 const TeamDetails = () => {
     const { teamid } = useParams();
@@ -40,33 +41,41 @@ const TeamDetails = () => {
     } = team;
     return (
         <div>
-            <div > 
+            <div>
                 <img className="top-background" src={strStadiumThumb} alt="" />
                 <img class="team-logo" src={strTeamBadge} alt="" />
             </div>
             <Container>
-                <div className="rounded p-3 detail-container mt-4">
-                    <h1>{strTeam}</h1>
-                    <h6>
-                        <FontAwesomeIcon icon={faCoffee} /> Founded:{" "}
-                        {intFormedYear}
-                    </h6>
-                    <h6>
-                        <FontAwesomeIcon icon={faFlag} /> Country: {strCountry}
-                    </h6>
-                    <h6>
-                        <FontAwesomeIcon icon={faFutbol} /> Sport Type: {}
-                    </h6>
-                    <h6>
-                        <FontAwesomeIcon icon={faMars} /> Gender: {strGender}
-                    </h6>
+                <div className="row rounded p-3 mt-4 detail-container">
+                    <div>
+                        <h1>{strTeam}</h1>
+                        <h6>
+                            <FontAwesomeIcon icon={faCoffee} /> Founded:{" "}
+                            {intFormedYear}
+                        </h6>
+                        <h6>
+                            <FontAwesomeIcon icon={faFlag} /> Country:{" "}
+                            {strCountry}
+                        </h6>
+                        <h6>
+                            <FontAwesomeIcon icon={faFutbol} /> Sport Type: {}
+                        </h6>
+                        <h6>
+                            <FontAwesomeIcon icon={faMars} /> Gender:{" "}
+                            {strGender}
+                        </h6>
+                    </div>
+                    <div>
+                        <img src={male} alt="" />
+                    </div>
                 </div>
                 <div className="mt-4">
                     <p>{strDescriptionEN}</p>
                     <p>{strDescriptionEN}</p>
                 </div>
-                <div>
-                    {/* <FontAwesomeIcon icon="fa-facebook-f" /> */}
+                <div className="m-5">
+                    <FontAwesomeIcon icon="check-square" />
+                   
                 </div>
             </Container>
         </div>
