@@ -1,0 +1,22 @@
+.top-background {
+    background-color: #131212;
+    height: 400px;
+    width: 100vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    opacity: 0.8;
+}
+.team-logo {
+    display: block;
+    margin-left: 40%;
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    top: 40px;
+    z-index: 10;
+}
+.detail-container{
+    background-color: rgba(6, 154, 223, 0.973);
+}

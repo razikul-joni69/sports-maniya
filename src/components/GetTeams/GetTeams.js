@@ -18,6 +18,7 @@ const GetTeams = () => {
     //     flexWrap: 'wrap',
     //     justifyContent: 'center'
     // }
+    
     return (
         <Container>
             <div className="team-container">
