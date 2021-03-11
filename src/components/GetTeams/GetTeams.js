@@ -12,7 +12,7 @@ const GetTeams = () => {
             .then((response) => response.json())
             .then((data) => setTeams(data.teams));
     }, []);
-    
+
     return (
         <Container>
             <div className="team-container">
