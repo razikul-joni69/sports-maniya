@@ -6,20 +6,21 @@
     background-repeat: no-repeat;
     background-size: contain;
     position: relative;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 .team-logo {
     display: block;
-    margin-left: 40%;
     height: 300px;
     width: 300px;
     position: absolute;
     top: 40px;
     z-index: 10;
+    margin: auto;
+    left: 0;
+    right: 0;
 }
 .detail-container {
     background-color: rgba(6, 154, 223, 0.973);
-    /* display: flex; */
     justify-content: space-between;
 }
 .detail-container img {
@@ -27,33 +28,32 @@
 }
 .social-icon > a {
     text-decoration: none;
+    color: white;
 }
-.youtube {
-    color: #eb3223;
+.facebook:hover {
+    transform: scale(1.2, 1.2);
+    transition-duration: 0.5s;
 }
-.website{
-    color: rgb(13, 221, 93);
+.instagram:hover {
+    transform: scale(1.2, 1.2);
+    transition-duration: 0.5s;
 }
-
-.facebook {
-    color: 	#4267B2;
+.twitter:hover {
+    transform: scale(1.2, 1.2);
+    transition-duration: 0.5s;
 }
-
-.twitter {
-    color: #1DA1F2;
+.youtube:hover {
+    transform: scale(1.2, 1.2);
+    transition-duration: 0.5s;
 }
-
-.instagram {
-    color: #e95950;
-}
-.social-icon > a:hover {
-    transform: translateY(-2px);
+.website:hover {
+    transform: scale(1.2, 1.2);
+    transition-duration: 0.5s;
 }
 
 @media only screen and (max-width: 768px) {
     .detail-container {
         text-align: center;
-        /* display:inline-block; */
-        /* justify-content:center; */
+        justify-content:center;
     }
 }

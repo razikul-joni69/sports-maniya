@@ -72,43 +72,44 @@ const TeamDetails = () => {
                     <p>{strDescriptionEN}</p>
                     <p>{strDescriptionEN}</p>
                 </div>
-                <div className="m-5 text-center social-icon">
+                <div className="mt-5 text-center social-icon">
                     <a target="_blank" href={`https://${strFacebook}`} rel="noopener noreferrer" >
                         <FontAwesomeIcon
-                            className="m-2 facebook"
+                            className="mx-2 facebook"
                             size="2x"
                             icon={["fab", "facebook-square"]}
                         />
                     </a>
                     <a target="_blank" href={`https://${strInstagram}`} rel="noopener noreferrer">
                         <FontAwesomeIcon
-                            className="m-2 instagram"
+                            className="mx-2 instagram"
                             size="2x"
                             icon={["fab", "instagram-square"]}
                         />
                     </a>
                     <a target="_blank" href={`https://${strTwitter}`} rel="noopener noreferrer">
                         <FontAwesomeIcon
-                            className="m-2 twitter"
+                            className="mx-2 twitter"
                             size="2x"
                             icon={["fab", "twitter-square"]}
                         />
                     </a>
                     <a target="_blank" href={`https://${strYoutube}`} rel="noopener noreferrer">
                         <FontAwesomeIcon
-                            className="m-2 youtube"
+                            className="mx-2 youtube"
                             size="2x"
                             icon={["fab", "youtube-square"]}
                         />
                     </a>
                     <a target="_blank" href={`https://${strWebsite}`} rel="noopener noreferrer">
                         <FontAwesomeIcon
-                            className="m-2 website"
+                            className="mx-2 website"
                             size="2x"
                             icon={faGlobe}
                         />
                     </a>
                 </div>
+                <h6 className="mt-2 text-center">all rights reserved&copy;razikul.joni</h6>
             </Container>
         </div>
     );

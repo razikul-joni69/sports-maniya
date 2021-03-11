@@ -9,9 +9,14 @@
         grid-template-columns: repeat(1, 1fr);
     }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) and (min-width: 100px)  {
     .team-container{
         grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media only screen and (max-width: 768px) and (min-width: 601px)  {
+    .team-container{
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 @media only screen and (min-width: 769px) {
@@ -22,5 +27,10 @@
 @media only screen and (min-width: 1024px) {
     .team-container{
         grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .team-container{
+        grid-template-columns: repeat(5, 1fr);
     }
 }
