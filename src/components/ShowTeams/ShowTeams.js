@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import "./ShowTeams.css";
 
 const ShowTeams = (props) => {
-    console.log(props);
     const { strSport, strTeam, strTeamBadge, idTeam } = props.team;
 
     return (

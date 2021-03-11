@@ -1,20 +1,13 @@
-import React from "react";
-import "react-bootstrap";
-import { Container, Nav, Navbar } from "react-bootstrap";
+import React from 'react';
+import header from './headerbg.jpg'
+import './Header.css'
 
 const Header = () => {
     return (
-        <div>
-            <Navbar bg="primary" variant="dark">
-                <Container>
-                    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-                    <Nav className="ml-auto">
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#features">Features</Nav.Link>
-                        <Nav.Link href="#pricing">Pricing</Nav.Link>
-                    </Nav>
-                </Container>
-            </Navbar>
+        <div className="header-background">
+            <img src={header} alt="bg pic"/>
+            <h1 className="text-center text-primary">Play with Soul</h1>
+            <h4 className="text-center text-warning">Know about your favorite team </h4>
         </div>
     );
 };

@@ -11,6 +11,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 import { useParams } from "react-router-dom";
+import female from "./female.png";
 import male from "./male.png";
 import "./TeamDetails.css";
 library.add(faFacebookF);
@@ -38,11 +39,20 @@ const TeamDetails = () => {
         strWebsite,
         strYoutube,
     } = team;
+
+    //conditional imager rendering
+    function ShowGender(props) {
+        const gender = props.gender;
+        if (gender === "male" || gender === "Male") {
+            return <img src={male} alt="male" />;
+        }
+        return <img src={female} alt="female" />;
+    }
     return (
         <div>
             <div>
                 <img className="top-background" src={strStadiumThumb} alt="" />
-                <img class="team-logo" src={strTeamBadge} alt="" />
+                <img className="team-logo" src={strTeamBadge} alt="" />
             </div>
             <Container>
                 <div className="row rounded p-3 mt-4 detail-container">
@@ -57,51 +67,70 @@ const TeamDetails = () => {
                             {strCountry}
                         </h6>
                         <h6>
-                            <FontAwesomeIcon icon={faFutbol} /> League: {strLeague}
+                            <FontAwesomeIcon icon={faFutbol} /> League:{" "}
+                            {strLeague}
                         </h6>
                         <h6>
                             <FontAwesomeIcon icon={faMars} /> Gender:{" "}
                             {strGender}
                         </h6>
                     </div>
-                    <div>
-                        <img src={male} alt="" />
-                    </div>
+                    <div>{<ShowGender gender={strGender}></ShowGender>}</div>
                 </div>
                 <div className="mt-4">
                     <p>{strDescriptionEN}</p>
                     <p>{strDescriptionEN}</p>
                 </div>
                 <div className="mt-5 text-center social-icon">
-                    <a target="_blank" href={`https://${strFacebook}`} rel="noopener noreferrer" >
+                    <a
+                        target="_blank"
+                        href={`https://${strFacebook}`}
+                        rel="noopener noreferrer"
+                    >
                         <FontAwesomeIcon
                             className="mx-2 facebook"
                             size="2x"
                             icon={["fab", "facebook-square"]}
                         />
                     </a>
-                    <a target="_blank" href={`https://${strInstagram}`} rel="noopener noreferrer">
+                    <a
+                        target="_blank"
+                        href={`https://${strInstagram}`}
+                        rel="noopener noreferrer"
+                    >
                         <FontAwesomeIcon
                             className="mx-2 instagram"
                             size="2x"
                             icon={["fab", "instagram-square"]}
                         />
                     </a>
-                    <a target="_blank" href={`https://${strTwitter}`} rel="noopener noreferrer">
+                    <a
+                        target="_blank"
+                        href={`https://${strTwitter}`}
+                        rel="noopener noreferrer"
+                    >
                         <FontAwesomeIcon
                             className="mx-2 twitter"
                             size="2x"
                             icon={["fab", "twitter-square"]}
                         />
                     </a>
-                    <a target="_blank" href={`https://${strYoutube}`} rel="noopener noreferrer">
+                    <a
+                        target="_blank"
+                        href={`https://${strYoutube}`}
+                        rel="noopener noreferrer"
+                    >
                         <FontAwesomeIcon
                             className="mx-2 youtube"
                             size="2x"
                             icon={["fab", "youtube-square"]}
                         />
                     </a>
-                    <a target="_blank" href={`https://${strWebsite}`} rel="noopener noreferrer">
+                    <a
+                        target="_blank"
+                        href={`https://${strWebsite}`}
+                        rel="noopener noreferrer"
+                    >
                         <FontAwesomeIcon
                             className="mx-2 website"
                             size="2x"
@@ -109,7 +138,9 @@ const TeamDetails = () => {
                         />
                     </a>
                 </div>
-                <h6 className="mt-2 text-center">all rights reserved&copy;razikul.joni</h6>
+                <h6 className="mt-2 text-center">
+                    all rights reserved&copy;razikul.joni
+                </h6>
             </Container>
         </div>
     );
