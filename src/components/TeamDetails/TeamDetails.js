@@ -1,10 +1,10 @@
 import { library } from "@fortawesome/fontawesome-svg-core";
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
 import {
-    faCoffee,
+    faClock,
     faFlag,
     faFutbol,
+    faGlobe,
     faMars,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -17,7 +17,6 @@ library.add(faFacebookF);
 const TeamDetails = () => {
     const { teamid } = useParams();
     const [team, setTeam] = useState({});
-    console.log(team);
     useEffect(() => {
         const url = `https://www.thesportsdb.com/api/v1/json/1/lookupteam.php?id=${teamid}`;
         fetch(url)
@@ -50,7 +49,7 @@ const TeamDetails = () => {
                     <div>
                         <h1>{strTeam}</h1>
                         <h6>
-                            <FontAwesomeIcon icon={faCoffee} /> Founded:{" "}
+                            <FontAwesomeIcon icon={faClock} /> Founded:{" "}
                             {intFormedYear}
                         </h6>
                         <h6>
@@ -58,7 +57,7 @@ const TeamDetails = () => {
                             {strCountry}
                         </h6>
                         <h6>
-                            <FontAwesomeIcon icon={faFutbol} /> Sport Type: {}
+                            <FontAwesomeIcon icon={faFutbol} /> League: {strLeague}
                         </h6>
                         <h6>
                             <FontAwesomeIcon icon={faMars} /> Gender:{" "}
@@ -73,9 +72,42 @@ const TeamDetails = () => {
                     <p>{strDescriptionEN}</p>
                     <p>{strDescriptionEN}</p>
                 </div>
-                <div className="m-5">
-                    <FontAwesomeIcon icon="check-square" />
-                   
+                <div className="m-5 text-center social-icon">
+                    <a target="_blank" href={`https://${strFacebook}`} rel="noopener noreferrer" >
+                        <FontAwesomeIcon
+                            className="m-2 facebook"
+                            size="2x"
+                            icon={["fab", "facebook-square"]}
+                        />
+                    </a>
+                    <a target="_blank" href={`https://${strInstagram}`} rel="noopener noreferrer">
+                        <FontAwesomeIcon
+                            className="m-2 instagram"
+                            size="2x"
+                            icon={["fab", "instagram-square"]}
+                        />
+                    </a>
+                    <a target="_blank" href={`https://${strTwitter}`} rel="noopener noreferrer">
+                        <FontAwesomeIcon
+                            className="m-2 twitter"
+                            size="2x"
+                            icon={["fab", "twitter-square"]}
+                        />
+                    </a>
+                    <a target="_blank" href={`https://${strYoutube}`} rel="noopener noreferrer">
+                        <FontAwesomeIcon
+                            className="m-2 youtube"
+                            size="2x"
+                            icon={["fab", "youtube-square"]}
+                        />
+                    </a>
+                    <a target="_blank" href={`https://${strWebsite}`} rel="noopener noreferrer">
+                        <FontAwesomeIcon
+                            className="m-2 website"
+                            size="2x"
+                            icon={faGlobe}
+                        />
+                    </a>
                 </div>
             </Container>
         </div>
